@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasta Bilgi Güncelleme</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>Hasta Bilgi Güncelleme</h2>
+    
+    <form action="YoneticiHastaAdGuncelle" method="post">
+        <label for="ad">Ad:</label>
+        <input type="text" id="ad" name="ad" required><br><br>
+        <input type="submit" value="Adı Guncelle">
+    </form>
+    
+    <form action="YoneticiHastaSoyadGuncelle" method="post">
+        <label for="soyad">Soyad:</label>
+        <input type="text" id="soyad" name="soyad" required><br><br>
+        <input type="submit" value="Soyadı Güncelle">
+    </form>
+    
+    <form action="YoneticiHastaDogumTarihiGuncelle" method="post">
+        <label for="dogumTarihi">Doğum Tarihi:</label>
+        <input type="text" id="dogumTarihi" name="dogumTarihi" required><br><br>
+        <input type="submit" value="Doğum Tarihini Güncelle">
+    </form> 
+        
+    <h3>Hasta Adres Bilgileri Güncelleme</h3>
+    
+    <form action="YoneticiAdresSilServlet" method="post">
+        <input type="submit" value="Adresleri Sil">
+    </form>
+    
+    <form action="YoneticiAdresEkleServlet" method="post">
+        <label for="adres">Adres Ekle:</label>
+        <input type="text" id="adres" name="adres" required><br><br>
+        <input type="submit" value="Adres Ekle">
+    </form>
+    
+    <h3>Hasta Telefon NO bilgileri güncelleme</h3>
+    
+    <form action="YoneticiTelefonSilServlet" method="post">
+        <input type="submit" value="Telefon numaralarını Sil">
+    </form>
+    
+    <form action="YoneticiTelefonEkleServlet" method="post">
+        <label for="telefon">Telefon No Ekle:</label>
+        <input type="text" id="telefon" name="telefon" required><br><br>
+        <input type="submit" value="Telefon numarası Ekle">
+    </form>
+    <a href="yoneticiPanel.html">Geri Dön</a>
+</body>
+</html>

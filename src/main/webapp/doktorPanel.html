@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasta Bilgi Sistemi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Doktor Bilgi Sistemi</h1>
+    <form action="DoktorBilgiServlet" method="post">   
+    <input type="submit" value="Doktor Bilgileri">
+    </form>
+    <form id="DoktorBilgileriGuncelle">   
+    <input type="submit" value="Bilgileri güncelle">
+    </form>
+    <form action="DoktorRandevularServlet" method="get">   
+    <input type="hidden" name="sayfa" value="1">
+    <input type="submit" value="Randevular">
+    </form>
+    <form action="DoktorRandevuGuncelleServlet" method="get">   
+        <label for="r_id">Randevu ID:</label><br>
+        <input type="text" id="r_id" name="r_id" required><br><br>
+        <input type="submit" value="Randevu Güncelle">
+    </form>
+    <form action="DoktorTibbiRaporlarServlet" method="get">   
+    <input type="hidden" name="sayfa" value="1">
+    <input type="submit" value="TıbbiRaporlar">
+    </form>
+    <form action="DoktorTibbiRaporEkle" method="post">
+        <label for="RaporHasta_id">Eklemek İstediğiniz Hasta ID:</label><br>
+        <input type="text" id="RaporHasta_id" name="RaporHasta_id" required><br><br>
+        <input type="submit" value="Tıbbi Rapor Ekle">
+    </form>
+    <form action="DoktorTibbiRaporSilServlet" method="post">   
+    <label for="Trapor_id">Silmek İstediğiniz Tıbbi Rapor ID:</label><br>
+    <input type="text" id="Trapor_id" name="Trapor_id" required><br><br>
+    <input type="submit" value="Tıbbi Rapor Sil">
+    </form>
+    <form action="DoktorTibbiRaporGuncelleServlet" method="post">   
+    <label for="tibbi_id">Güncellemek İstediğiniz Tıbbi Rapor ID:</label><br>
+    <input type="text" id="tibbi_id" name="tibbi_id" required><br><br>
+    <input type="submit" value="Tıbbi Rapor Güncelle">
+    </form>
+    
+    
+    <a href="index.html">Çıkış Yap</a>
+    <script>
+        document.getElementById("DoktorBilgileriGuncelle").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            window.location.href = "DoktorBilgileriGuncelle.html";
+        });
+</script>
+</body>
+</html>

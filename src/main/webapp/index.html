@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giriş Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="content">
+     
+    </div>
+    <form id="HastaForm">
+        <input type="hidden" name="role" value="hasta">
+        <input type="submit" value="Hasta Girisi">
+    </form>
+   <form id="DoktorForm" >
+        <input type="hidden" name="role" value="doktor">
+        <input type="submit" value="Doktor Girisi">
+    </form>
+     <form id="YoneticiForm">
+        <input type="hidden" name="role" value="yonetici">
+        <input type="submit" value="Yönetici Girisi">
+    </form>
+
+    <script>
+        document.getElementById("HastaForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            window.location.href = "HastaGiris.html";
+        });
+</script>
+<script>
+document.getElementById("DoktorForm").addEventListener("submit",function(event){
+    event.preventDefault();
+    window.location.href="DoktorGiris.html";
+});
+ </script>
+<script>
+document.getElementById("YoneticiForm").addEventListener("submit",function(event){
+    event.preventDefault();
+    window.location.href="YoneticiGiris.html";
+});
+ </script>
+</body>
+</html>

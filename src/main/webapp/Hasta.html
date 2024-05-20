@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasta Bilgi Sistemi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Hasta Bilgi Sistemi</h1>
+    <form action=" HastaBilgiServlet" method="post">   
+    <input type="submit" value="Hasta bilgileri">
+    </form>
+    <form id="HastaBilgileriGüncelle">   
+    <input type="submit" value="Bilgileri güncelle">
+    </form>
+    <form action="HastaRandevularServlet" method="get">   
+    <input type="hidden" name="sayfa" value="1">
+    <input type="submit" value="Randevular">
+    </form>
+    <form id="RandevuAl">   
+    <input type="submit" value="Randevu al">
+    </form>
+    <form action="RandevuIptalServlet" method="get">   
+        <label for="randevu_id">Randevu ID:</label><br>
+        <input type="text" id="randevu_id" name="randevu_id" required><br><br>
+        <input type="submit" value="Randevu İptal Et">
+    </form>
+    <form action="RandevuGuncelleServlet" method="get">   
+    <label for="r_id">Randevu ID:</label><br>
+    <input type="text" id="r_id" name="r_id" required><br><br>
+    <input type="submit" value="Randevu Güncelle">
+    </form>
+    
+    <form action="HastaTibbiRaporlariGoruntuleServlet" method="get">
+        <input type="hidden" name="sayfa" value="1">
+    <input type="submit" value="Tıbbi Raporları Görüntüle">
+    </form>
+    
+    <form id="TıbbiRaporEkle">   
+    <input type="submit" value="Tıbbi Rapor Ekle">
+    </form>
+    <form action="HastaTibbiRaporSilServlet" method="post">   
+    <label for="Trapor_id">Tıbbi Rapor ID:</label><br>
+    <input type="text" id="Trapor_id" name="Trapor_id" required><br><br>
+    <input type="submit" value="Tıbbi Rapor Sil">
+    </form>
+    <form action="HastaTibbiRaporGuncelleServlet" method="post">   
+    <label for="tibbi_id">Tıbbi Rapor ID:</label><br>
+    <input type="text" id="tibbi_id" name="tibbi_id" required><br><br>
+    <input type="submit" value="Tıbbi Rapor Güncelle">
+    </form>
+    
+    <a href="index.html">Çıkış Yap</a>
+    <script>
+        document.getElementById("HastaBilgileriGüncelle").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            window.location.href = "HastaBilgiGüncelleme.html";
+        });
+</script>
+<script>
+        document.getElementById("RandevuAl").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            window.location.href = "HastaRandevuAl.html";
+        });
+</script>
+<script>
+        document.getElementById("TıbbiRaporEkle").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            window.location.href = "HastaTıbbiRaporEkle.html";
+        });
+</script>
+
+
+</body>
+</html>

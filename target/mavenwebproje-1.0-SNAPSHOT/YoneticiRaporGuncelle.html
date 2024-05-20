@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tıbbi Rapor Güncelleme</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>Tıbbi Rapor Güncelleme</h2>
+    
+    <form action="YoneticiRaporTarihiDegisServlet" method="post">
+        <label for="Tarih">Tarih:</label>
+        <input type="text" id="Tarih" name="Tarih" required><br><br>
+        <input type="submit" value="Tarihi Guncelle">
+    </form>
+    
+    <form action="YoneticiRaporIcerikDegisServlet" method="post">
+        <label for="ıcerik">İçerik :</label>
+        <input type="text" id="ıcerik" name="ıcerik" required><br><br>
+        <input type="submit" value="İçerik Guncelle">
+    </form>
+    <a href="yoneticiPanel.html">Geri Dön</a>
+</body>
+</html>

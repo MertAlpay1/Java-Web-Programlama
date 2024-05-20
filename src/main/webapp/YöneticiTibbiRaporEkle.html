@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tıbbi Rapor Yükleme</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>Tıbbi Rapor Yükleme</h2>
+    <form action="YoneticiTibbiRaporEkleServlet" method="post" enctype="multipart/form-data">
+        <label for="HastaId">Hasta ID:</label><br>
+        <input type="text" id="HastaId" name="HastaId" required><br><br>
+        
+        <label for="raporTarihi">Rapor Tarihi:</label><br>
+        <input type="text" id="raporTarihi" name="raporTarihi" required><br><br>
+        
+        <label for="raporIcerigi">Rapor İçeriği:</label><br>
+        <textarea id="raporIcerigi" name="raporIcerigi" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="Foto">Rapor Fotoğrafı:</label><br>
+        <input type="file" id="Foto" name="Foto" accept="image/*" required><br><br>
+        
+        <input type="submit" value="Yükle">
+    </form>
+</body>
+</html>

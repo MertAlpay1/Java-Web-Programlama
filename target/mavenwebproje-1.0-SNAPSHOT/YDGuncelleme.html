@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doktor Bilgi Güncelleme</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>Doktor Bilgi Güncelleme</h2>
+    
+    <form action="YoneticiDoktorAdGuncelleServlet" method="post">
+        <label for="ad">Ad:</label>
+        <input type="text" id="ad" name="ad" required><br><br>
+        <input type="submit" value="Adı Güncelle">
+    </form>
+    
+    <form action="YoneticiDoktorSoyAdGuncelleServlet" method="post">
+        <label for="soyad">Soyad:</label>
+        <input type="text" id="soyad" name="soyad" required><br><br>
+        <input type="submit" value="Soyadı Güncelle">
+    </form>
+    
+    <form action="YoneticiDoktorUzmanlikAlanGuncelleServlet" method="post">
+        <label for="uzmanlıkAlan">Uzmanlık Alanı:</label>
+        <input type="text" id="uzmanlıkAlan" name="uzmanlıkAlan" required><br><br>
+        <input type="submit" value="Uzmanlık Alanı Güncelle">
+    </form> 
+    
+    <form action="YoneticiDoktorHastaneGuncelleServlet" method="post">
+        <label for="Hastane">Çalıştığı Hastane:</label>
+        <input type="text" id="Hastane" name="Hastane" required><br><br>
+        <input type="submit" value="Çalıştığı Hastaneyi Güncelle">
+    </form>   
+   
+    <a href="yoneticiPanel.html">Geri Dön</a>
+</body>
+</html>

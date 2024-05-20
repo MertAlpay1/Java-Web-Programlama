@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yönetici Giriş Formu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>Yönetici Girişi</h2>
+    <form action="YoneticiGirisServlet" method="post">
+        <label for="username">ID:</label>
+        <input type="text" id="username" name="yonetici_id" required><br><br>
+        <label for="password">Şifre:</label>
+        <input type="password" id="password" name="sifre" required><br><br>
+        <input type="submit" value="Giriş Yap">
+    </form>
+    <a href="index.html">Geri Dön</a>
+</body>
+</html>

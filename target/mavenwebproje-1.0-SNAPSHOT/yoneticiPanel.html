@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yönetici Panel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>Yönetici Panel</h2>
+    <form action="YoneticiHastaGosterServlet" method="get">
+        <input type="hidden" name="sayfa" value="1">
+        <input type="submit" value="Hastaları Görüntüle">
+    </form>
+    <br>
+    <form action="YoneticiDoktorGosterServlet" method="get">
+    <input type="hidden" name="sayfa" value="1">
+    <input type="submit" value="Doktorları Göster">
+</form>
+    <form id="YoneticiHastaKayıt">
+        <input type="hidden" name="hastakayıt" value="hastakayıt">
+        <input type="submit" value="Hasta Kayıt Yap">
+    </form>
+    <form action="hastaSilServlet" method="get">
+        <label for="hasta_id">Silmek İstediğiniz Hasta ID:</label>
+        <input type="text" id="hasta_id" name="hasta_id" required><br><br>
+        <input type="submit" value="Hasta sil">
+    </form>
+    <form id="YoneticiDoktorKayıt">
+        <input type="hidden" name="doktorkayıt" value="doktorkayıt">
+        <input type="submit" value="Doktor Kayıt Yap">
+    </form>
+    <form action="DoktorSilServlet" method="get">
+        <label for="doktor_id">Silmek İstediğiniz Doktor ID:</label>
+        <input type="text" id="doktor_id" name="doktor_id" required><br><br>
+        <input type="submit" value="Doktor sil">
+    </form>
+    <form action="YoneticiHastaSecServlet" method="post">
+        <label for="h_id">Güncellemek İstediğiniz Hasta ID:</label>
+        <input type="text" id="h_id" name="h_id" required><br><br>
+        <input type="submit" value="Hasta Güncelle">
+    </form>
+    <form action="YoneticiDoktorSecServlet" method="post">
+        <label for="d_id">Güncellemek İstediğiniz Doktor ID:</label>
+        <input type="text" id="d_id" name="d_id" required><br><br>
+        <input type="submit" value="Doktor Güncelle">
+    </form>
+    <form action="YoneticiRandevularServlet" method="get">
+        <input type="hidden" name="sayfa" value="1">
+        <input type="submit" value="Randevuları göster">
+    </form>
+    <form action="YoneticiRandevuSil" method="post">
+        <label for="r_id">Silmek İstediğiniz Randevu ID:</label>
+        <input type="text" id="r_id" name="r_id" required><br><br>
+        <input type="submit" value="Randevu Sil ">
+    </form>
+    <form action="YoneticiRandevuSecServlet" method="post">
+        <label for="randevu_id">Güncellemek İstediğiniz Randevu  ID:</label>
+        <input type="text" id="randevu_id" name="randevu_id" required><br><br>
+        <input type="submit" value="Randevu Güncelle">
+    </form>
+    <form action="YoneticiTibbiRaporlarServlet" method="get">   
+    <input type="hidden" name="sayfa" value="1">
+    <input type="submit" value="TıbbiRaporlar">
+    </form>
+    <form id="YoneticiTıbbiRaporEkle">
+        <input type="hidden" name="yöneticitibbiR" value="yöneticitibbiR">
+        <input type="submit" value="Tıbbi Rapor Ekle">
+    </form>
+    <form action="YoneticiTibbiRaporSil" method="post">
+        <label for="YtibbiRapor_id">Silmek İstediğiniz Tibbi Rapor ID:</label>
+        <input type="text" id="YtibbiRapor_id" name="YtibbiRapor_id" required><br><br>
+        <input type="submit" value="Randevu Sil ">
+    </form>  
+    <form action="YoneticiTibbiRaportSecGunceleServlet" method="post">
+        <label for="Tibbi_id">Güncellemek İstediğiniz Rapor  ID:</label>
+        <input type="text" id="Tibbi_id" name="Tibbi_id" required><br><br>
+        <input type="submit" value="Tıbbi Rapor Güncelle">
+    </form>
+    
+    
+    <a href="index.html">Çıkış Yap</a>
+    
+      <script>
+        document.getElementById("YoneticiHastaKayıt").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            window.location.href = "hastaKayit.html";
+        });
+</script>
+<script>
+document.getElementById("YoneticiDoktorKayıt").addEventListener("submit", function(event) {
+            event.preventDefault();
+            window.location.href = "doktorKayit.html";
+        });
+</script>
+<script>
+document.getElementById("YoneticiTıbbiRaporEkle").addEventListener("submit", function(event) {
+            event.preventDefault();
+            window.location.href = "YöneticiTibbiRaporEkle.html";
+        });
+</script>
+</body>
+</html>

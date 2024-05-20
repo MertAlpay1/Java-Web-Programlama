@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasta Kayıt Formu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>Hasta Kayıt Formu</h2>
+    <form action="HastaKayit" method="post">
+        <label for="ad">Adı:</label><br>
+        <input type="text" id="ad" name="ad" required><br>
+        <label for="soyad">Soyadı:</label><br>
+        <input type="text" id="soyad" name="soyad" required><br>
+        <label for="sifre">Şifre:</label><br>
+        <input type="password" id="sifre" name="sifre" required><br>
+        <label for="cinsiyet">Cinsiyet:</label><br>
+        <input type="radio" id="erkek" name="cinsiyet" value="Erkek" required>
+        <label for="erkek">Erkek</label>
+        <input type="radio" id="kadin" name="cinsiyet" value="Kadın" required>
+        <label for="kadin">Kadın</label><br>
+        <label for="dogum_tarihi">Doğum Tarihi:</label><br>
+        <input type="text" id="dogum_tarihi" name="dogum_tarihi" required><br>
+        <label for="adres">Adres:</label><br>
+        <input type="text" id="adres" name="adres" required><br>
+        <label for="telefon_no">Telefon Numarası:</label><br>
+        <input type="tel" id="telefon_no" name="telefon_no" required><br><br>
+        <input type="submit" value="Kaydet">
+    </form>
+</body>
+</html>
